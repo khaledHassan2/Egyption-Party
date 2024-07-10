@@ -28,3 +28,17 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+let char =100;
+let inputChars =document.getElementById("chars");
+document.querySelector('textarea').addEventListener('input',function(e){
+  if(e.data !=null){
+    char = char-1;
+  }
+  else{
+    char = char + 1;
+
+  }
+  console.log(e);
+  inputChars.innerHTML=char;
+
+})
